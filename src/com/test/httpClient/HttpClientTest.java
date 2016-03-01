@@ -197,7 +197,7 @@ public class HttpClientTest {
         CloseableHttpClient httpclient = HttpClients.createDefault();  
         try {  
             // 创建httpget.    
-            HttpGet httpget = new HttpGet("http://www.baidu.com/");  
+            HttpGet httpget = new HttpGet("http://localhost:80/ChargeCenter/rest/get");  
             System.out.println("executing request " + httpget.getURI());  
             // 执行get请求.    
             CloseableHttpResponse response = httpclient.execute(httpget);  
@@ -211,7 +211,7 @@ public class HttpClientTest {
                     // 打印响应内容长度    
                     System.out.println("Response content length: " + entity.getContentLength());  
                     // 打印响应内容    
-                    System.out.println("Response content: " + EntityUtils.toString(entity));  
+                    System.out.println("Response content: " + EntityUtils.toString(entity));
                 }  
                 System.out.println("------------------------------------");  
             } finally {  
